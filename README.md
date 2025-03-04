@@ -103,16 +103,4 @@ This is a full-stack Expense Tracker application built with React.js for the fro
 2.  Obtain the connection string.
 3.  Update the `MONGODB_URI` in your backend's `.env` file and your deployment platform's environment variables.
 
-### Update Frontend API Endpoint
 
-1.  Update the API endpoint in your frontend code (axios calls) to point to your deployed backend URL.
-2.  Rebuild your frontend (`npm run build`).
-3.  Redeploy your frontend to Vercel.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
-
-## License
-
-[MIT](LICENSE)
