@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack Expense Tracker application built with React.js for the frontend and Node.js with Express for the backend, using MongoDB as the database.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* Add new expenses with amount, category, date, and description.
+* Filter expenses by category and date.
+* View expenses as sticky notes.
+* Visualize expense data with pie charts and bar charts.
+* Calculate total expenses within a specified date range.
+* Remove individual expenses.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Node.js (v14 or higher)
+* npm (Node Package Manager) or yarn
+* MongoDB (local or cloud-based like MongoDB Atlas)
+* Git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup
 
-### `npm test`
+1.  **Clone the repository:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone <repository_url>
+    cd expense-tracker
+    ```
 
-### `npm run build`
+2.  **Backend Setup:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    * Navigate to the backend directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        ```bash
+        cd backend
+        ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    * Install dependencies:
 
-### `npm run eject`
+        ```bash
+        npm install
+        ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    * Create a `.env` file in the `backend` directory with the following content:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        ```
+        MONGODB_URI=mongodb://localhost:27017/expense-tracker # Replace with your MongoDB connection string
+        PORT=5000
+        ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    * Start the backend server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        ```bash
+        npm start
+        ```
 
-## Learn More
+3.  **Frontend Setup:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * Navigate to the frontend directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        ```bash
+        cd ../frontend
+        ```
 
-### Code Splitting
+    * Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+        ```bash
+        npm install
+        ```
 
-### Analyzing the Bundle Size
+    * Start the frontend development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        ```bash
+        npm start
+        ```
 
-### Making a Progressive Web App
+4.  **Database Setup:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    * Ensure you have MongoDB installed and running.
+    * If using MongoDB Atlas, create a cluster and obtain the connection string.
+    * Update the `MONGODB_URI` in the `.env` file with your connection string.
 
-### Advanced Configuration
+## Running Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1.  **Start MongoDB:** Ensure your local MongoDB instance or MongoDB Atlas cluster is running.
+2.  **Start the Backend:** Navigate to the `backend` directory and run `npm start`.
+3.  **Start the Frontend:** Navigate to the `frontend` directory and run `npm start`.
+4.  **Access the Application:** Open your web browser and navigate to `http://localhost:3000`.
 
-### Deployment
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1.  **Add Expenses:** Use the form to add new expenses.
+2.  **Filter Expenses:** Use the filter inputs to filter expenses by category or date.
+3.  **View Expenses:** Expenses are displayed as sticky notes.
+4.  **View Charts:** Pie and bar charts display expense data by category.
+5.  **Calculate Total Expenses:** Enter a start and end date and click "Get Total."
+6.  **Remove Expenses:** Click "Remove" on a sticky note.
 
-### `npm run build` fails to minify
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Frontend (Vercel)
+
+1.  Create a Vercel account and install the Vercel CLI.
+2.  Navigate to the `frontend` directory and run `vercel`.
+3.  Follow the prompts to deploy your frontend.
+4.  Set any necessary environment variables in your Vercel project settings.
+
+### Backend (Heroku, Render, etc.)
+
+1.  Choose a platform (Heroku, Render, etc.).
+2.  Create an account and install the platform's CLI.
+3.  Create a `Procfile` in the `backend` directory (e.g., `web: node server.js`).
+4.  Deploy your backend code following the platform's instructions.
+5.  Set environment variables (e.g., `MONGODB_URI`, `PORT`) in your platform's settings.
+
+### Database (MongoDB Atlas)
+
+1.  Create a MongoDB Atlas account and cluster.
+2.  Obtain the connection string.
+3.  Update the `MONGODB_URI` in your backend's `.env` file and your deployment platform's environment variables.
+
+### Update Frontend API Endpoint
+
+1.  Update the API endpoint in your frontend code (axios calls) to point to your deployed backend URL.
+2.  Rebuild your frontend (`npm run build`).
+3.  Redeploy your frontend to Vercel.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue.
+
+## License
+
+[MIT](LICENSE)
