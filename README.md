@@ -23,7 +23,7 @@ This is a full-stack Expense Tracker application built with React.js for the fro
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/justkunal/expense-tracker.git
     cd expense-tracker
     ```
 
