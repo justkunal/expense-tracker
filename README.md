@@ -96,22 +96,6 @@ This is a full-stack Expense Tracker application built with React.js for the fro
 5.  **Calculate Total Expenses:** Enter a start and end date and click "Get Total."
 6.  **Remove Expenses:** Click "Remove" on a sticky note.
 
-## Deployment
-
-### Frontend (Vercel)
-
-1.  Create a Vercel account and install the Vercel CLI.
-2.  Navigate to the `frontend` directory and run `vercel`.
-3.  Follow the prompts to deploy your frontend.
-4.  Set any necessary environment variables in your Vercel project settings.
-
-### Backend (Heroku, Render, etc.)
-
-1.  Choose a platform (Heroku, Render, etc.).
-2.  Create an account and install the platform's CLI.
-3.  Create a `Procfile` in the `backend` directory (e.g., `web: node server.js`).
-4.  Deploy your backend code following the platform's instructions.
-5.  Set environment variables (e.g., `MONGODB_URI`, `PORT`) in your platform's settings.
 
 ### Database (MongoDB Atlas)
 
